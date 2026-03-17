@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Droplets } from 'lucide-react';
-import { PlaceholderImage } from './PlaceholderImage';
+
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +10,13 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo Section */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 md:w-14 md:h-14">
-              <PlaceholderImage text="Logo" aspectRatio="aspect-square" className="rounded-xl" />
-            </div>
-            <div>
-              <h1 className="text-xl md:text-2xl font-black text-zinc-900 leading-none">R J CROUCH</h1>
-              <p className="text-[10px] md:text-xs font-bold text-sky-600 uppercase tracking-widest mt-1">Plumbing & Gas</p>
-            </div>
-          </div>
+          <a href="#" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="R J Crouch Ltd Logo" 
+              className="h-10 md:h-12 w-auto object-contain shrink-0"
+            />
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">

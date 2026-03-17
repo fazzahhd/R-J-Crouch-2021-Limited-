@@ -1,6 +1,5 @@
 import React from 'react';
-import { PlaceholderImage } from './PlaceholderImage';
-import { CheckCircle2, Droplets, Flame, Home, ShieldCheck, Wrench } from 'lucide-react';
+import { CheckCircle2, ShieldCheck } from 'lucide-react';
 
 export const About: React.FC = () => {
   const services = [
@@ -13,7 +12,11 @@ export const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="relative">
-            <PlaceholderImage aspectRatio="aspect-square" className="rounded-3xl shadow-2xl" text="Insert About Us Photo Here" />
+            <img 
+              src="/about.jpg" 
+              alt="R J Crouch Ltd Company Vehicle" 
+              className="rounded-3xl shadow-2xl w-full h-full object-cover aspect-square"
+            />
             <div className="absolute -bottom-6 -right-6 bg-sky-600 text-white p-8 rounded-3xl shadow-xl hidden md:block">
               <p className="text-4xl font-bold">40+</p>
               <p className="text-sm font-medium opacity-90 uppercase tracking-wider">Years Experience</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle, ShieldCheck, Star } from 'lucide-react';
-import { PlaceholderImage } from './PlaceholderImage';
+
 
 export const Hero: React.FC = () => {
   return (
@@ -64,8 +64,12 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
-              <PlaceholderImage aspectRatio="aspect-[4/5]" text="Insert Hero Action Photo Here" />
+            <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white aspect-[4/5] md:aspect-auto md:h-[600px]">
+              <img 
+                src="/hero.jpg" 
+                alt="R J Crouch Plumbing construction site" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Floating Badge */}
