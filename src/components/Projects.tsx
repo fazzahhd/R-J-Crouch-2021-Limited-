@@ -1,15 +1,50 @@
 import React from 'react';
-import { PlaceholderImage } from './PlaceholderImage';
 import { ExternalLink } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   const projects = [
-    { title: "Residential Renovation", category: "Plumbing & Gas", location: "Fendalton" },
-    { title: "Commercial Roof Repair", category: "Roofing", location: "Sydenham" },
-    { title: "New Build Installation", category: "Full Service", location: "Rolleston" },
-    { title: "Industrial Maintenance", category: "Plumbing", location: "Hornby" },
-    { title: "Kitchen Gas Upgrade", category: "Gasfitting", location: "Merivale" },
-    { title: "Drainage Solution", category: "Drain Laying", location: "Cashmere" },
+    {
+      title: "Residential Renovation",
+      category: "Plumbing & Gas",
+      location: "Fendalton",
+      image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop&auto=format",
+      alt: "Bathroom plumbing renovation",
+    },
+    {
+      title: "Commercial Roof Repair",
+      category: "Roofing",
+      location: "Sydenham",
+      image: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?w=600&h=400&fit=crop&auto=format",
+      alt: "Commercial roof repair work",
+    },
+    {
+      title: "New Build Installation",
+      category: "Full Service",
+      location: "Rolleston",
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&auto=format",
+      alt: "New home construction site",
+    },
+    {
+      title: "Industrial Maintenance",
+      category: "Plumbing",
+      location: "Hornby",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&auto=format",
+      alt: "Industrial plumbing pipes maintenance",
+    },
+    {
+      title: "Kitchen Gas Upgrade",
+      category: "Gasfitting",
+      location: "Merivale",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&auto=format",
+      alt: "Modern kitchen gas upgrade",
+    },
+    {
+      title: "Drainage Solution",
+      category: "Drain Laying",
+      location: "Cashmere",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&auto=format",
+      alt: "Outdoor drainage pipe installation",
+    },
   ];
 
   return (
@@ -33,7 +68,11 @@ export const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-zinc-100">
               <div className="relative overflow-hidden">
-                <PlaceholderImage aspectRatio="aspect-video" text={`Insert ${project.title} Photo Here`} className="group-hover:scale-105 transition-transform duration-500" />
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-sky-600 uppercase tracking-wider">
                   {project.category}
                 </div>
